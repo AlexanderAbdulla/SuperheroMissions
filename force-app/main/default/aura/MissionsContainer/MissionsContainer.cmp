@@ -1,0 +1,32 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="MissionController">
+    <div class="slds-page-header">
+        <div class="slds-page-header__row">
+          <div class="slds-page-header__col-title">
+            <div class="slds-media" >
+                <lightning:icon iconName="custom:custom43" alternativeText="Account" title="Account" />
+              <div class="slds-media__body" style="padding-left: 5px;">
+                <div class="slds-page-header__name">
+                  <div class="slds-page-header__name-title">
+                    <h1>
+                      <span class="slds-page-header__title slds-truncate" title="Missions List">Missions List</span>
+                    </h1>
+                  </div>
+                </div>
+                <p class="slds-page-header__name-meta">Alex Abdulla • Head Honcho</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c-container">
+        <lightning:layout >
+            <!-- MissionTile -->
+                <c:MissionTile missionStatus="New"/>
+            <!-- MissionTile -->
+                <c:MissionTile missionStatus="Working"/>
+            <!-- MissionTile -->
+                <c:MissionTile missionStatus="Closed"/>
+            <!-- MissionTile -->
+        </lightning:layout>
+    </div>
+</aura:component>

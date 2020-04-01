@@ -1,0 +1,15 @@
+<aura:component controller="MissionController">
+    <aura:attribute name="missionStatus" type="String"/>
+    <aura:attribute name="firstMission" type="Mission__c"/>
+    <aura:attribute name="assignedSuperhuman" type="Contact"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:layoutItem padding="around-small">
+        <div class="header-column">
+            <p class="field-title" title="Field 1">Status: <b>{!v.missionStatus}</b></p>
+            <p>Name: <b>{!v.firstMission.Name}</b></p>
+            <p>Superhero Assigned: <b>{!v.firstMission.Assigned_Superhuman__c}</b></p>
+        </div>
+    </lightning:layoutItem>
+</aura:component>	
